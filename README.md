@@ -30,11 +30,3 @@ You should see output indicating that the server is running, typically on `http:
 ## Usage
 
 You can use the backend to interact with GPT-3 models, execute code, and perform other tasks. The backend provides a RESTful API that you can use to send requests and receive responses.
-
-## Contributing
-
-If you'd like to contribute to the backend, please follow the guidelines in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
-This project is licensed under the terms of the MIT license. For more information, please refer to [LICENSE](LICENSE).
