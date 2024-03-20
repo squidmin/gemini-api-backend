@@ -1,0 +1,5 @@
+google-generativeai
+google-cloud-secret-manager
+IPython
+jupyter
+jupyterlab
