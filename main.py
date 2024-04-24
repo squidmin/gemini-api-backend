@@ -46,7 +46,6 @@ def list_models():
                 models_supporting_generation.append(m.name)
         return models_supporting_generation
     except Exception as e:
-        # It's a good practice to catch and handle exceptions
         # This could be a network error, configuration issue, etc.
         raise HTTPException(status_code=500, detail=str(e))
 
