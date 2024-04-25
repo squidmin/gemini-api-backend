@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "91363af7-4732-4080-936a-065f2386b232",
+		"name": "Gemini API backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32765571"
+	},
+	"item": [
+		{
+			"name": "Local - List models",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/list-models",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"list-models"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local - Generate text",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/generate-text?prompt=How+are+you",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"generate-text"
+					],
+					"query": [
+						{
+							"key": "prompt",
+							"value": "How+are+you"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

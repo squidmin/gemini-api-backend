@@ -1,11 +1,14 @@
-# Test your FastAPI endpoints
-
-GET http://127.0.0.1:8000/
-Accept: application/json
+### Generate Text
+# This request generates text based on a given prompt.
+GET http://0.0.0.0:8000/generate-text/
+Content-Type: application/json
+Query: prompt=What is atomic number of oxygen?
 
 ###
 
-GET http://127.0.0.1:8000/hello/User
-Accept: application/json
+### List Models
+# This request retrieves a list of models that support content generation.
+GET http://0.0.0.0:8000/list-models/
+Content-Type: application/json
 
 ###

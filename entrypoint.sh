@@ -13,6 +13,14 @@ if [[ -z "$project_id" || -z "$api_key_secret_name" ]]; then
     exit 1
 fi
 
+# Authenticate using service account
+if [[ -z "$GOOGLE_APPLICATION_CREDENTIALS" ]]; then
+    echo "GOOGLE_APPLICATION_CREDENTIALS not set."
+    exit 1
+fi
+
+gcloud auth activate-service-account --key-file=$GOOGLE_APPLICATION_CREDENTIALS
+
 # Construct the full name of the secret version
 secret_version_name="projects/${project_id}/secrets/${api_key_secret_name}/versions/latest"
 
@@ -28,4 +36,4 @@ else
     export GEMINI_API_KEY
 fi
 
-uvicorn main:app --reload
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
