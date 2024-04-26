@@ -36,4 +36,6 @@ else
     export GEMINI_API_KEY
 fi
 
+pytest test_main.py
+
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload

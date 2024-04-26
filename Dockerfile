@@ -20,9 +20,11 @@ WORKDIR /app
 
 # Copy the dependencies file to the working directory
 COPY requirements.txt .
+COPY requirements-test.txt .
 
 # Install project dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements-test.txt
 
 # Copy the content of the local src directory to the working directory
 COPY . .
